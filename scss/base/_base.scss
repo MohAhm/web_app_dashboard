@@ -1,0 +1,58 @@
+// =============================================
+//              Base Styles                    
+// ============================================= 
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: palette(grey, x-dark);
+    font-size: em($base__font-size);
+    line-height: ($base__line/$base__font-size);
+    font-family: $font-family;
+}
+
+h1 {
+    font-size: em(36px);
+    font-weight: $font-weight--bold;
+}
+
+h4 {
+    font-size: em(21px);
+    font-weight: $font-weight--medium;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: em($base__line);
+}
+
+a {
+    font-size: em(14px);
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-primary-dark;
+        text-decoration: underline;
+    }
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    outline: 0;
+    text-transform: uppercase;
+}

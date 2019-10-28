@@ -1,0 +1,42 @@
+// =============================================
+//              Mixins                     
+// ============================================= 
+
+// Create a flex container
+@mixin flexbox($disp: flex, $dir: null, $just: null, $align: null) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
+// Calculate gird columns
+@mixin g-columns {
+    @for $i from 1 through $g-col-count {
+        &-#{$i} {
+            flex-basis: $i / $g-col-count * 100%;
+        }
+    }
+}
+
+// Media queries
+@mixin mq($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+// Generate modifier color classes, using Sass map
+@mixin btn-bg-colors($map, $per: 0%) {
+
+    @each $key,
+    $color in $map {
+        &.#{$key} {
+            background-color: $color;
+
+            &:hover {
+                background-color: lighten($color, $per);
+            }
+        }
+    }
+}

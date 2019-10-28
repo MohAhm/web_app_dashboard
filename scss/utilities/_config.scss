@@ -1,0 +1,68 @@
+// =============================================
+//              Global Variables               
+// =============================================
+
+// Font Stacks
+$font-url--google   : 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
+
+$font-family        : 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+$font-weight--light         : 300;
+$font-weight--medium        : 400;
+$font-weight--bold          : 700;
+
+
+// Descriptive Base Colors
+$white          : #FFF;
+$grey           : #B2B2B2;
+
+$ship-cove      : #7377BF;
+$mulled         : #4D4C72;
+$de-york        : #81C98F;
+$glacier        : #74B1BF;
+
+// Color Usage
+$color-primary           : $ship-cove;
+$color-primary-dark      : $mulled;
+$color-secondary         : $de-york;
+
+// Color Palette Modifiers
+$color-palettes: (
+    grey: (
+        x-light   : lighten($grey, 21%),      // new members/recent activity, border-bottom
+        light     : lighten($grey, 15%),      // borders
+        base      : $grey,                    // button
+        dark      : darken($grey, 14%),       // chart navigation
+        x-dark    : darken($grey, 30%)        // text
+    )
+);
+
+// UI Colors
+$btn-colors: (
+    primary       : $color-primary,
+    secondary     : $grey
+);
+
+
+// Text
+$base__font-size    : 16px;
+$base__line         : 24px;
+$letter-space       : 2px;
+
+// Border radius
+$br--default     : 5px;
+
+// Transitions
+$trns-duration   : .3s;
+
+// Grid
+$g-col-count    : 12;
+
+// Breakpoints
+$mobile     : 320px;
+$tablet     : 768px;
+$desktop    : 1024px;
+
+// Layout
+$max-width  : 1400px;
