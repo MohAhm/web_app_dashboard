@@ -223,4 +223,115 @@ button {
   outline: 0;
   text-transform: uppercase; }
 
+.nav__link a, .nav__link--current a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.875em;
+  padding: 0.9375em 0;
+  border-left: 3px solid transparent;
+  transition: opacity 0.3s ease-in-out; }
+
+.nav__link a:hover, .nav__link--current a {
+  border-left-color: #85DB81; }
+
+header {
+  background-color: #7377BF;
+  grid-area: head; }
+
+.sidebar {
+  background-color: #4D4C72;
+  grid-area: sidenav; }
+
+main {
+  background-color: #81C98F;
+  grid-area: main; }
+
+.container > * {
+  color: #FFF; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(max-content, 70px);
+  grid-template-columns: 90px 1fr 1fr;
+  grid-template-areas: 'head head head' 'sidenav main main' 'sidenav main main' 'sidenav main main' 'sidenav main main' 'sidenav main main'; }
+
+.nav {
+  display: flex;
+  flex-direction: column; }
+  .nav__link a svg {
+    width: 32px;
+    height: 32px;
+    opacity: 0.5; }
+  .nav__link a:hover svg {
+    opacity: 1; }
+  .nav__link--current a svg {
+    width: 32px;
+    height: 32px;
+    opacity: 1; }
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.25em; }
+  .main-header a {
+    color: #FFF; }
+    .main-header a:hover {
+      color: #FFF;
+      text-decoration: none; }
+  .main-header svg {
+    width: 20px;
+    height: 20px;
+    transition: transform .3s ease-out; }
+    .main-header svg:hover {
+      transform: scale(1.3); }
+  .main-header .site-logo {
+    align-self: center;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-weight: 300; }
+  .main-header .user-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 0.625em; }
+  .main-header .user-menu li:first-child {
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 1.25em; }
+    .main-header .user-menu li:first-child .notifications-dot {
+      position: absolute;
+      height: 0.5em;
+      width: 0.5em;
+      top: -2px;
+      right: -2px;
+      background-color: #85DB81;
+      border-radius: 50%; }
+  .main-header .user-menu li:last-child {
+    padding: 0.3125em 0 0.3125em 0.9375em;
+    border-left: 2px solid #5D61BF; }
+    .main-header .user-menu li:last-child .user {
+      display: flex;
+      align-items: center; }
+      .main-header .user-menu li:last-child .user span {
+        margin-left: 0.625em; }
+  @media (min-width: 769px) {
+    .main-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center; }
+      .main-header .site-logo {
+        margin-right: auto; }
+      .main-header .user-menu {
+        padding: 0; } }
+
+.img--avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%; }
+
 /*# sourceMappingURL=style.css.map */

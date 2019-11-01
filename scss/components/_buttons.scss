@@ -1,0 +1,18 @@
+// ============================================= 
+//              Buttons                       
+// ============================================= 
+
+.btn {
+    @include btn-bg-colors($btn-colors, 15%);
+    @extend %btn;
+    margin-top: em(15px);
+    padding: em(10px) 0;
+
+    @include mq($tablet) {
+        padding: em(10px) em(30px);
+
+        &+& {
+            margin-left: em(10px);
+        }
+    }
+}

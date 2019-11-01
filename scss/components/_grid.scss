@@ -1,0 +1,39 @@
+// ============================================= 
+//              Grid System                      
+// ============================================= 
+
+header {
+    background-color: $color-primary;
+    grid-area: head;
+}
+
+.sidebar {
+    background-color: palette(color-primary, x-dark);
+    grid-area: sidenav;
+}
+
+main {
+    background-color: $color-secondary;
+    grid-area: main;
+}
+
+.container>* {
+    color: $white;
+    // font-weight: $font-weight--bold;
+    // text-transform: uppercase;
+    // padding: 1em;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: minmax(max-content, 70px);
+    grid-template-columns: 90px 1fr 1fr;
+    grid-template-areas:
+        'head head head'
+        'sidenav main main'
+        'sidenav main main'
+        'sidenav main main'
+        'sidenav main main'
+        'sidenav main main';
+}

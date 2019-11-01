@@ -2,12 +2,31 @@
 //              Mixins                     
 // ============================================= 
 
+// BEM selectors
+@mixin elem($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin modi($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
 // Create a flex container
 @mixin flexbox($disp: flex, $dir: null, $just: null, $align: null) {
     display: $disp;
     flex-direction: $dir;
     justify-content: $just;
     align-items: $align;
+}
+
+// Ser size for an icon
+@mixin icn-size($sz) {
+    width: $sz;
+    height: $sz;
 }
 
 // Calculate gird columns
@@ -20,9 +39,27 @@
 }
 
 // Media queries
-@mixin mq($size) {
-    @media (min-width: $size) {
-        @content;
+@mixin mq($break) {
+    @if $break=="mobile" {
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            @content;
+        }
+    }
+
+    @else if $break=="tablet" {
+        @media (min-width: $tablet + 1) {
+            @content;
+        }
+    }
+
+    @else if $break=="desktop" {
+        @media (max-width: $desktop) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "'#{$break}' is not a vaild breakpoint name.";
     }
 }
 

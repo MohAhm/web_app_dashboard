@@ -18,17 +18,24 @@ $white          : #FFF;
 $grey           : #B2B2B2;
 
 $ship-cove      : #7377BF;
-$mulled         : #4D4C72;
 $de-york        : #81C98F;
 $glacier        : #74B1BF;
 
 // Color Usage
 $color-primary           : $ship-cove;
-$color-primary-dark      : $mulled;
 $color-secondary         : $de-york;
 
 // Color Palette Modifiers
 $color-palettes: (
+    color-primary: (
+        base      : $ship-cove,
+        dark      : #5D61BF,       
+        x-dark    : #4D4C72
+    ),
+    color-secondary: (
+        light     : #85DB81,
+        base      : $de-york
+    ),
     grey: (
         x-light   : lighten($grey, 21%),      // new members/recent activity, border-bottom
         light     : lighten($grey, 15%),      // borders
@@ -51,13 +58,11 @@ $base__line         : 24px;
 $letter-space       : 2px;
 
 // Border radius
-$br--default     : 5px;
+$br--default     : .4em;
+$br--round       : 50%;
 
 // Transitions
 $trns-duration   : .3s;
-
-// Grid
-$g-col-count    : 12;
 
 // Breakpoints
 $mobile     : 320px;

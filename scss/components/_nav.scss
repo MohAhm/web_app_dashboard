@@ -1,0 +1,41 @@
+// ============================================= 
+//              Navigation                       
+// ============================================= 
+
+.nav {
+    @include flexbox($dir: column);
+
+    @include elem(link) {
+
+        a {
+            @extend %nav-item-link;
+
+            svg {
+                @include icn-size(32px);
+                opacity: 0.5;
+            }
+
+            &:hover {
+                @extend %nav-item-on;
+
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include modi(current) {
+
+            a {
+                @extend %nav-item-link;
+                @extend %nav-item-on;
+
+                svg {
+                    @include icn-size(32px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+}

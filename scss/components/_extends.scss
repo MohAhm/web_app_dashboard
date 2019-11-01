@@ -1,0 +1,24 @@
+// ============================================= 
+//              Extends                           
+// ============================================= 
+
+// Navbar
+%nav-item-link {
+    @include flexbox($just: center, $align: center);
+    margin-top: em(30px);
+    padding: em(15px) 0;
+    border-left: 3px solid transparent;
+    transition: opacity $trns-duration ease-in-out;
+}
+
+%nav-item-on {
+    border-left-color: palette(color-secondary, light);
+}
+
+
+// Image
+%img-disp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
