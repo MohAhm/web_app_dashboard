@@ -14,13 +14,18 @@ body {
     font-family: $font-family;
 }
 
+h1,
+h4 {
+    margin: 0;
+}
+
 h1 {
-    font-size: em(36px);
-    font-weight: $font-weight--bold;
+    font-size: em(24px);
+    font-weight: $font-weight--medium;
 }
 
 h4 {
-    font-size: em(21px);
+    font-size: em(18px);
     font-weight: $font-weight--medium;
     text-transform: uppercase;
 }

@@ -1,0 +1,15 @@
+// =============================================
+//              Helpers               
+// =============================================
+
+.is-hidden-mobile {
+    display: none;
+
+    @include mq(tablet) {
+        display: block;
+    }
+}
+
+.wrap {
+    padding: 0 em(25px);
+}

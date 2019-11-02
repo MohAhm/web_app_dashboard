@@ -3,16 +3,25 @@
 // ============================================= 
 
 .btn {
-    @include btn-bg-colors($btn-colors, 15%);
+    @include bg-colors($btn-colors);
+}
+
+[class^="btn--"] {
     @extend %btn;
-    margin-top: em(15px);
-    padding: em(10px) 0;
 
-    @include mq($tablet) {
-        padding: em(10px) em(30px);
+    width: auto;
+    display: inline-block;
+}
 
-        &+& {
-            margin-left: em(10px);
-        }
+.btn--search {
+    margin-left: -5px;
+    color: $color-primary;
+    border: 1px solid palette(grey, light);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+
+    &:hover {
+        opacity: initial;
     }
 }

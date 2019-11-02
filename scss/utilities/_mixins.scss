@@ -47,13 +47,13 @@
     }
 
     @else if $break=="tablet" {
-        @media (min-width: $tablet + 1) {
+        @media (min-width: $tablet) {
             @content;
         }
     }
 
     @else if $break=="desktop" {
-        @media (max-width: $desktop) {
+        @media (min-width: $desktop) {
             @content;
         }
     }
@@ -63,17 +63,14 @@
     }
 }
 
-// Generate modifier color classes, using Sass map
-@mixin btn-bg-colors($map, $per: 0%) {
+// Generate modifier color classes
+@mixin bg-colors($map) {
 
-    @each $key,
+    @each $theme,
     $color in $map {
-        &.#{$key} {
+        &--#{$theme} {
             background-color: $color;
-
-            &:hover {
-                background-color: lighten($color, $per);
-            }
         }
     }
+
 }

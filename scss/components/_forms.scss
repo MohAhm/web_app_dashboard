@@ -1,29 +1,52 @@
 // ============================================= 
-//              Forms                           
+//              Form                           
 // ============================================= 
 
-.form {
+form {
     flex-basis: 100%;
+}
 
-    .input {
-        display: block;
-        width: 94%;
-        margin: em(10px) auto 0;
-        border: none;
-        padding: em(10px);
-        border-bottom: em($br--default) solid $color-primary;
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
 
-        &:focus {
-            outline: 0;
-        }
-    }
+fieldset {
+    border: none;
+}
 
-    .hidden {
-        position: absolute;
-        left: -10000px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-    }
+legend {
+    font-size: em(18px);
+    padding-bottom: em(15px);
+    width: 100%;
+    text-transform: uppercase;
+}
+
+label {
+    display: block;
+    margin-bottom: em(15px);
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: em(15px);
+    outline: 0;
+    border-radius: $br--default;
+    border: 1px solid palette(grey, light);
+}
+
+select {
+    padding: 6px;
+    height: 52px;
+}
+
+::placeholder {
+    color: $grey;
+    font-weight: 300;
 }

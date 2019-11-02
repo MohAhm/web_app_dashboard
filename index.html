@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <header class="main-header">
+        <header class="main-header wrap">
             <a class="site-logo" href="#">
                 <b>WEB</b>analytics &#8482;
             </a>
@@ -31,7 +31,7 @@
                 <li>
                     <a href="#" class="user">
                         <img class="img--avatar" src="images/member-2.jpg" alt="Avatar">
-                        <span>Josh Sullivan</span>
+                        <span class="is-hidden-mobile">Josh Sullivan</span>
                     </a>
                 </li>
             </ul><!-- ./user-menu -->
@@ -78,8 +78,56 @@
             </ul>
         </nav><!-- ./sidebar -->
 
-        <main>Main</main>
-    </div>
+        <div class="tab">
+            <div class="tab--header wrap">
+                <h1>Dashboard</h1>
+                <form>
+                    <input type="search" id="search" placeholder="Search" aria-label="Search">
+
+                    <button type="submit" class="btn--search">
+                        <span class="fas fa-search"></span>
+                    </button>
+                </form>
+            </div>
+            <div class="tab--content">
+                <div class="alert"></div>
+            </div>
+        </div>
+
+        <div class="line-chart">
+            <div class="wrap">
+                <h4>Traffic</h4>
+            </div>
+        </div>
+
+        <div class="bar-chart">
+            <h4>Daily Traffic</h4>
+        </div>
+
+        <div class="donut-chart">
+            <h4>Mobile Users</h4>
+        </div>
+
+        <div class="social">
+            <h4>Social Stats</h4>
+        </div>
+
+        <div class="new-members">
+            <h4>New Members</h4>
+        </div>
+
+        <div class="recent-activity">
+            <h4>Recent Activity</h4>
+        </div>
+
+        <div class="message-user">
+            <h4>Message User</h4>
+        </div>
+
+        <div class="settings">
+            <h4>Settings</h4>
+        </div>
+    </div><!-- ./container -->
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/app.js"></script>

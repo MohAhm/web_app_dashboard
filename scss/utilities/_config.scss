@@ -2,6 +2,9 @@
 //              Global Variables               
 // =============================================
 
+// Font Awesome
+$font-awesome--icons    :   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+
 // Font Stacks
 $font-url--google   : 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
 
@@ -48,7 +51,8 @@ $color-palettes: (
 // UI Colors
 $btn-colors: (
     primary       : $color-primary,
-    secondary     : $grey
+    secondary     : $grey,
+    search        : $white
 );
 
 

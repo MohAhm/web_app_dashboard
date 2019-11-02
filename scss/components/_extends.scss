@@ -4,15 +4,26 @@
 
 // Navbar
 %nav-item-link {
-    @include flexbox($just: center, $align: center);
-    margin-top: em(30px);
-    padding: em(15px) 0;
-    border-left: 3px solid transparent;
-    transition: opacity $trns-duration ease-in-out;
+    @include flexbox();
+    padding: em(15px);
+    border-bottom: 3px solid transparent;
+    transition: border-left-color $trns-duration ease-in-out;
+
+    @include mq(tablet) {
+        @include flexbox($just: center);
+        border-left: 3px solid transparent;
+        margin-top: em(30px);
+        padding: em(15px) 0;
+    }
 }
 
 %nav-item-on {
-    border-left-color: palette(color-secondary, light);
+    border-bottom-color: palette(color-secondary, light);
+
+    @include mq(tablet) {
+        border-left-color: palette(color-secondary, light);
+        border-bottom-color: transparent;
+    }
 }
 
 
@@ -21,4 +32,25 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+// Buttons
+%btn {
+    width: 100%;
+    padding: em(15px);
+    border: 0;
+    color: $white;
+    border-radius: $br--default;
+    text-transform: uppercase;
+    font-weight: $font-weight--medium;
+    transition: opacity $trns-duration;
+
+    &:hover {
+        opacity: .75;
+    }
+
+    &:active {
+        opacity: initial;
+    }
 }

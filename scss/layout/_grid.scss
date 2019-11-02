@@ -1,0 +1,81 @@
+// ============================================= 
+//              Grid System                      
+// ============================================= 
+
+header {
+    background-color: $color-primary;
+    grid-area: head;
+}
+
+.sidebar {
+    background-color: palette(color-primary, x-dark);
+    grid-area: sidenav;
+}
+
+.tab {
+    grid-area: tab;
+}
+
+.line-chart {
+    grid-area: line_chart;
+}
+
+.bar-chart {
+    grid-area: bar_chart;
+}
+
+.donut-chart {
+    grid-area: donut_chart;
+}
+
+.social {
+    grid-area: social;
+}
+
+.new-members {
+    grid-area: new_members;
+}
+
+.recent-activity {
+    grid-area: recent_activity;
+}
+
+.message-user {
+    grid-area: message_user;
+}
+
+.settings {
+    grid-area: settings;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: minmax(max-content, 70px);
+    grid-template-areas:
+        'head'
+        'sidenav'
+        'tab'
+        'line_chart'
+        'bar_chart'
+        'donut_chart'
+        'social'
+        'new_members'
+        'recent_activity'
+        'message_user'
+        'settings';
+
+
+    @include mq(tablet) {
+        height: 100vh; // temp...
+        grid-template-columns: 90px 1fr 1fr;
+        grid-template-areas:
+            'head head head'
+            'sidenav tab tab'
+            'sidenav line_chart line_chart'
+            'sidenav bar_chart donut_chart'
+            'sidenav social social'
+            'sidenav new_members recent_activity'
+            'sidenav message_user settings';
+    }
+}

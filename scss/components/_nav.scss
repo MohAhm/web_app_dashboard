@@ -3,7 +3,7 @@
 // ============================================= 
 
 .nav {
-    @include flexbox($dir: column);
+    @include flexbox(flex, row, space-around);
 
     @include elem(link) {
 
@@ -13,6 +13,7 @@
             svg {
                 @include icn-size(32px);
                 opacity: 0.5;
+                transition: opacity $trns-duration ease-in-out;
             }
 
             &:hover {
@@ -38,4 +39,7 @@
         }
     }
 
+    @include mq(tablet) {
+        @include flexbox($dir: column);
+    }
 }
