@@ -215,6 +215,9 @@ h4 {
 p {
   line-height: 1.5em; }
 
+b {
+  font-weight: 700; }
+
 a {
   font-size: 0.875em;
   color: #7377BF;
@@ -296,7 +299,7 @@ header {
     flex-direction: row;
     padding: 25px 0; }
     .tab--header form input {
-      width: 75%; }
+      width: 100%; }
   @media (min-width: 768px) {
     .tab--header {
       display: flex;
@@ -316,6 +319,25 @@ header {
   position: relative;
   top: -1px;
   border-top: 1px solid #d8d8d8; }
+  .tab--content .alert-message {
+    display: flex;
+    flex-direction: row;
+    display: block;
+    color: #FFF;
+    background-color: #7377BF;
+    padding: 0.9375em;
+    border-radius: 0.4em; }
+    .tab--content .alert-message p {
+      display: inline;
+      margin: 0; }
+      .tab--content .alert-message p b {
+        padding-right: 0.625em; }
+    .tab--content .alert-message button {
+      padding: 0;
+      float: right; }
+    @media (min-width: 768px) {
+      .tab--content .alert-message {
+        margin-top: 1.5625em; } }
 
 .nav__link a, .nav__link--current a {
   display: flex;
@@ -338,7 +360,7 @@ header {
       border-bottom-color: transparent; } }
 
 [class^="btn--"] {
-  width: 100%;
+  width: auto;
   padding: 0.9375em;
   border: 0;
   color: #FFF;
@@ -473,10 +495,6 @@ select {
   background-color: #B2B2B2; }
 .btn--search {
   background-color: #FFF; }
-
-[class^="btn--"] {
-  width: auto;
-  display: inline-block; }
 
 .btn--search {
   margin-left: -5px;

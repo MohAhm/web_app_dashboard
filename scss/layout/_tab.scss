@@ -20,7 +20,7 @@
             padding: 25px 0;
 
             input {
-                width: 75%;
+                width: 100%;
             }
         }
 
@@ -55,6 +55,35 @@
         position: relative;
         top: -1px;
         border-top: 1px solid palette(grey, light);
+
+        .alert-message {
+            @include flexbox($dir: row);
+
+            display: block;
+            color: $white;
+            background-color: $color-primary;
+            padding: em(15px);
+            border-radius: $br--default;
+
+
+            p {
+                display: inline;
+                margin: 0;
+
+                b {
+                    padding-right: em(10px);
+                }
+            }
+
+            button {
+                padding: 0;
+                float: right;
+            }
+
+            @include mq(tablet) {
+                margin-top: em(25px);
+            }
+        }
     }
 
 }
