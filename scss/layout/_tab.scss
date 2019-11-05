@@ -57,7 +57,7 @@
         border-top: 1px solid palette(grey, light);
 
         .alert-message {
-            @include flexbox($dir: row);
+            @extend %clearfix;
 
             display: block;
             color: $white;

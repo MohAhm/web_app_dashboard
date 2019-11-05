@@ -2,6 +2,11 @@
 //              Functions              
 // =============================================
 
+// Import Chart.js css
+@if variable-exists(chart-min-css) {
+    @import url($chart-min-css);
+}
+
 // Import if Font Awesome icons
 @if variable-exists(font-awesome--icons) {
     @import url($font-awesome--icons);
