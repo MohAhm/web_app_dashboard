@@ -2,8 +2,8 @@
 //              Extends                           
 // ============================================= 
 
-// Navbar
-%nav-item-link {
+// Side Navbar
+%nav-side-link {
     @include flexbox();
     padding: em(15px);
     border-bottom: 3px solid transparent;
@@ -17,12 +17,23 @@
     }
 }
 
-%nav-item-on {
+%nav-side-on {
     border-bottom-color: palette(color-secondary, light);
 
     @include mq(tablet) {
         border-left-color: palette(color-secondary, light);
         border-bottom-color: transparent;
+    }
+}
+
+// Chart Navbar
+%nav-chart-link {
+    padding: em(8px) em(14px);
+    color: palette(grey, dark);
+    font-weight: $font-weight--bold;
+
+    &:hover {
+        text-decoration: none;
     }
 }
 

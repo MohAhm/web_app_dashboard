@@ -60,9 +60,10 @@
             @extend %clearfix;
 
             display: block;
+            margin-bottom: em(30px);
+            padding: em(15px);
             color: $white;
             background-color: $color-primary;
-            padding: em(15px);
             border-radius: $br--default;
 
 
@@ -82,6 +83,7 @@
 
             @include mq(tablet) {
                 margin-top: em(25px);
+                margin-bottom: 0;
             }
         }
     }

@@ -16,7 +16,7 @@
 				<b>WEB</b>analytics &#8482;
 			</a>
 
-			<ul class="user-menu">
+			<ul class="user-nav">
 				<li>
 					<a href="#">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -38,8 +38,8 @@
 		</header><!-- ./main-header -->
 
 		<nav class="sidebar">
-			<ul class="nav">
-				<li class="nav__link--current">
+			<ul class="side-nav">
+				<li class="side-nav__link--current">
 					<a href="#">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path
@@ -48,7 +48,7 @@
 						</svg>
 					</a>
 				</li>
-				<li class="nav__link">
+				<li class="side-nav__link">
 					<a href="#">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path
@@ -57,7 +57,7 @@
 						</svg>
 					</a>
 				</li>
-				<li class="nav__link">
+				<li class="side-nav__link">
 					<a href="#">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path
@@ -66,7 +66,7 @@
 						</svg>
 					</a>
 				</li>
-				<li class="nav__link">
+				<li class="side-nav__link">
 					<a href="#">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 							<path
@@ -104,41 +104,56 @@
 			</div><!-- ./tab--content -->
 		</div><!-- ./tab -->
 
-		<div class="line-chart">
-			<div class="wrap">
+		<div class="line-chart widgets">
+			<div class="chart">
 				<h4>Traffic</h4>
 
-				<div class="chart-container">
-					<canvas id="webTraffic" height="200" aria-label="Web Traffic Line Chart" role="img"></canvas>
-				</div>
-			</div>
-		</div>
+				<ul class="chart-nav">
+					<li class="chart-nav__link"><a href="#">Hourly</a></li>
+					<li class="chart-nav__link"><a href="#">Daily</a></li>
+					<li class="chart-nav__link--current"><a href="#">Weekly</a></li>
+					<li class="chart-nav__link"><a href="#">Monthly</a></li>
+				</ul><!-- ./chart-nav -->
+			</div><!-- ./chart -->
 
-		<div class="bar-chart">
+			<div class="chart-container">
+				<canvas id="traffic" aria-label="Traffic Line Chart"></canvas>
+			</div><!-- ./chart-container -->
+		</div><!-- ./line-chart -->
+
+		<div class="bar-chart widgets">
 			<h4>Daily Traffic</h4>
-		</div>
 
-		<div class="donut-chart">
+			<div class="chart-container">
+				<canvas id="dailyTraffic" aria-label="Daily Traffic Bar Chart"></canvas>
+			</div><!-- ./chart-container -->
+		</div><!-- ./bar-chart -->
+
+		<div class="donut-chart widgets">
 			<h4>Mobile Users</h4>
-		</div>
 
-		<div class="social">
+			<div class="chart-container">
+				<canvas id="mobileUsers" aria-label="Mobile Users Donut Chart"></canvas>
+			</div><!-- ./chart-container -->
+		</div><!-- ./donut-chart -->
+
+		<div class="social widgets">
 			<h4>Social Stats</h4>
 		</div>
 
-		<div class="new-members">
+		<div class="new-members widgets">
 			<h4>New Members</h4>
 		</div>
 
-		<div class="recent-activity">
+		<div class="recent-activity widgets">
 			<h4>Recent Activity</h4>
 		</div>
 
-		<div class="message-user">
+		<div class="message-user widgets">
 			<h4>Message User</h4>
 		</div>
 
-		<div class="settings">
+		<div class="settings widgets">
 			<h4>Settings</h4>
 		</div>
 	</div><!-- ./container -->

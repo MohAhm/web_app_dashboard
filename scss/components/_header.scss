@@ -29,12 +29,12 @@
         font-weight: $font-weight--light;
     }
 
-    .user-menu {
+    .user-nav {
         @include flexbox($dir: row, $align: center);
         padding-bottom: em(10px);
     }
 
-    .user-menu li:first-child {
+    .user-nav li:first-child {
         display: inline-block;
         position: relative;
         margin-top: 10px;
@@ -51,7 +51,7 @@
         }
     }
 
-    .user-menu li:last-child {
+    .user-nav li:last-child {
         padding: em(5px) 0 em(5px) em(15px);
         border-left: 2px solid palette(color-primary, dark);
 
@@ -67,7 +67,7 @@
 
 
     @include mq(tablet) {
-        .user-menu {
+        .user-nav {
             padding: 0;
         }
     }

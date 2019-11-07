@@ -2,6 +2,30 @@
 //              Chart             
 // =============================================
 
-.chart-container {
-    margin-top: 40px;
+.chart {
+    @include flexbox(flex, row, space-between);
+
+    &-nav {
+        @include flexbox($dir: row);
+
+        @include elem(link) {
+
+            a {
+                @extend %nav-chart-link;
+            }
+
+            @include modi(current) {
+
+                a {
+                    @extend %nav-chart-link;
+                    margin: 0 em(10px);
+                    color: $white;
+                    border-radius: em(20px);
+                    background-color: $color-secondary;
+                }
+            }
+        }
+    }
+
+    &-container {}
 }

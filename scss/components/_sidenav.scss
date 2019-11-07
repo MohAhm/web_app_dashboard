@@ -1,14 +1,14 @@
 // ============================================= 
-//              Navigation                       
+//              Side Navigation                       
 // ============================================= 
 
-.nav {
+.side-nav {
     @include flexbox(flex, row, space-around);
 
     @include elem(link) {
 
         a {
-            @extend %nav-item-link;
+            @extend %nav-side-link;
 
             svg {
                 @include icn-size(32px);
@@ -17,7 +17,7 @@
             }
 
             &:hover {
-                @extend %nav-item-on;
+                @extend %nav-side-on;
 
                 svg {
                     opacity: 1;
@@ -28,8 +28,8 @@
         @include modi(current) {
 
             a {
-                @extend %nav-item-link;
-                @extend %nav-item-on;
+                @extend %nav-side-link;
+                @extend %nav-side-on;
 
                 svg {
                     @include icn-size(32px);
