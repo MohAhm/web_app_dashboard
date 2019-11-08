@@ -1,0 +1,55 @@
+// ============================================= 
+//              Social Networks                       
+// ============================================= 
+
+.social-stats {
+
+    @include elem(col) {
+        @include flexbox();
+        margin: 0 em(16px) em(32px);
+        padding: em(20px);
+        border: 1px solid palette(grey, light);
+        border-radius: $br--default;
+
+        @include modi(icon) {
+            @include flexbox($dir: column, $just: center, $align: center);
+            height: em(72px);
+            width: em(72px);
+            background-color: $color-primary;
+            border-radius: $br--round;
+
+            svg {
+                @include icn-size(32px)
+            }
+        }
+
+        @include modi(content) {
+            margin-left: em(20px);
+
+            .text {
+                display: block;
+                margin-bottom: -20px;
+                color: $color-primary;
+                font-size: em(20px);
+                font-weight: $font-weight--bold;
+            }
+
+            .number {
+                font-size: em(52px);
+                font-weight: $font-weight--light;
+            }
+        }
+
+    }
+
+    @include mq(tablet) {
+        @include flexbox($just: space-around);
+        flex-wrap: wrap;
+
+        @include elem(col) {
+            flex: 1 25%;
+        }
+    }
+
+
+}

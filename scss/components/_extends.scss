@@ -12,6 +12,7 @@
     @include mq(tablet) {
         @include flexbox($just: center);
         border-left: 3px solid transparent;
+        border-bottom: none;
         margin-top: em(30px);
         padding: em(15px) 0;
     }
@@ -22,7 +23,6 @@
 
     @include mq(tablet) {
         border-left-color: palette(color-secondary, light);
-        border-bottom-color: transparent;
     }
 }
 
