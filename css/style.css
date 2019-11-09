@@ -332,7 +332,11 @@ button {
     .main-header .user-nav li:last-child .user {
       display: flex;
       align-items: center; }
-      .main-header .user-nav li:last-child .user span {
+      .main-header .user-nav li:last-child .user--img {
+        width: 33px;
+        height: 33px;
+        border-radius: 50%; }
+      .main-header .user-nav li:last-child .user--name {
         margin-left: 0.625em; }
   @media (min-width: 768px) {
     .main-header .user-nav {
@@ -357,11 +361,6 @@ button {
     .side-nav {
       display: flex;
       flex-direction: column; } }
-
-.img--avatar {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%; }
 
 form {
   flex-basis: 100%; }
@@ -575,9 +574,31 @@ header {
 @media (min-width: 768px) {
   .social-stats {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap; }
     .social-stats__col {
       flex: 1 25%; } }
+
+.list-group__item {
+  display: flex;
+  padding-bottom: 0.9375em; }
+  .list-group__item + .list-group__item {
+    padding-top: 0.9375em;
+    border-top: 1px solid #e8e8e8; }
+  .list-group__item--img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 0.625em; }
+  .list-group__item--content p {
+    margin-top: 0;
+    margin-bottom: -0.375em; }
+  .list-group__item--info {
+    margin-left: auto;
+    font-weight: 700; }
+    .list-group__item--info:hover {
+      text-decoration: none; }
+  .list-group__item--date {
+    margin-left: auto; }
 
 /*# sourceMappingURL=style.css.map */

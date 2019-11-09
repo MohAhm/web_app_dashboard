@@ -1,0 +1,45 @@
+// ============================================= 
+//              List Users                      
+// ============================================= 
+
+.list-group {
+
+    @include elem(item) {
+        @include flexbox();
+        padding-bottom: em(15px);
+
+        &+& {
+            padding-top: em(15px);
+            border-top: 1px solid palette(grey, x-light);
+        }
+
+        @include modi(img) {
+            @include icn-size(38px);
+            border-radius: $br--round;
+            margin-right: em(10px);
+        }
+
+        @include modi(content) {
+
+            p {
+                margin-top: 0;
+                margin-bottom: em(-6px);
+            }
+        }
+
+        @include modi(info) {
+            margin-left: auto;
+            font-weight: $font-weight--bold;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        @include modi(date) {
+            margin-left: auto;
+        }
+
+    }
+
+}

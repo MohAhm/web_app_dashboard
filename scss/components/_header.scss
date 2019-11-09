@@ -59,7 +59,12 @@
             @include flexbox();
             align-items: center;
 
-            span {
+            @include modi(img) {
+                @include icn-size(33px);
+                border-radius: $br--round;
+            }
+
+            @include modi(name) {
                 margin-left: em(10px);
             }
         }

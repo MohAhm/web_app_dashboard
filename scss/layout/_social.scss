@@ -43,13 +43,12 @@
     }
 
     @include mq(tablet) {
-        @include flexbox($just: space-around);
+        @include flexbox($just: space-between);
         flex-wrap: wrap;
 
         @include elem(col) {
             flex: 1 25%;
         }
     }
-
 
 }
