@@ -2,9 +2,9 @@
 //              Functions              
 // =============================================
 
-// Import Chart.js css
-@if variable-exists(chart-min-css) {
-    @import url($chart-min-css);
+// Import if Google Fonts URL is defined
+@if variable-exists(font-url--google) {
+    @import url($font-url--google);
 }
 
 // Import if Font Awesome icons
@@ -12,9 +12,14 @@
     @import url($font-awesome--icons);
 }
 
-// Import if Google Fonts URL is defined
-@if variable-exists(font-url--google) {
-    @import url($font-url--google);
+// Import Chart.js css
+@if variable-exists(chart-min-css) {
+    @import url($chart-min-css);
+}
+
+// Import Css Toggle Switch
+@if variable-exists(toggle-switch) {
+    @import url($toggle-switch);
 }
 
 // Calculate em values

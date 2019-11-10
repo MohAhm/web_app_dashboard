@@ -1,0 +1,27 @@
+// ============================================= 
+//              Settings                    
+// ============================================= 
+
+.settings {
+
+    form {
+        @extend %clearfix;
+
+        select {
+            margin-top: em(45px);
+        }
+
+        .btn-grouped {
+            width: 50%;
+            float: left;
+            padding-left: em(15px);
+            padding-right: 0;
+
+            &:first-of-type {
+                padding-left: 0;
+                padding-right: em(15px);
+            }
+        }
+    }
+
+}

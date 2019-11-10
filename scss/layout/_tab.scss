@@ -21,6 +21,7 @@
 
             input {
                 width: 100%;
+                margin: 0;
             }
         }
 
@@ -77,6 +78,7 @@
             }
 
             button {
+                width: auto;
                 padding: 0;
                 float: right;
             }
