@@ -29,7 +29,15 @@
 
         @include modi(info) {
             margin-left: auto;
-            font-weight: $font-weight--bold;
+
+            &:before {
+                content: "\f054";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: $font-weight--light;
+                text-decoration: inherit;
+                font-size: em(18px);
+            }
 
             &:hover {
                 text-decoration: none;

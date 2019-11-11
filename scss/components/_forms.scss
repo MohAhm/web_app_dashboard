@@ -42,8 +42,15 @@ textarea {
 }
 
 select {
-    padding: 6px;
-    height: 52px;
+    color: $grey;
+    font-weight: $font-weight--light;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('../icons/arrow-down.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right em(11px) top 55%, 0 0;
+    background-size: em(20px) auto, 100%;
 }
 
 ::placeholder {

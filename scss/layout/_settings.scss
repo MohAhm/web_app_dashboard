@@ -7,10 +7,6 @@
     form {
         @extend %clearfix;
 
-        select {
-            margin-top: em(45px);
-        }
-
         .btn-grouped {
             width: 50%;
             float: left;
@@ -20,6 +16,12 @@
             &:first-of-type {
                 padding-left: 0;
                 padding-right: em(15px);
+            }
+        }
+
+        @include mq(tablet) {
+            select {
+                margin: em(55px) 0;
             }
         }
     }

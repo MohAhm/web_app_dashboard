@@ -48,29 +48,6 @@ header {
     grid-area: settings;
 }
 
-.widgets {
-    padding: em(30px);
-    border-bottom: 1px solid palette(grey, light);
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    @include mq(tablet) {
-
-        &:nth-last-child(2) {
-            border-bottom: none;
-        }
-
-        &:nth-child(5),
-        &:nth-child(8),
-        &:nth-child(10) {
-            border-right: 1px solid palette(grey, light);
-        }
-
-    }
-}
-
 .container {
     display: grid;
     grid-template-rows: minmax(max-content, 70px);
@@ -90,6 +67,7 @@ header {
 
     @include mq(tablet) {
         grid-template-columns: 90px 1fr 1fr;
+        grid-template-rows: 70px auto;
         grid-template-areas:
             'head head head'
             'sidenav tab tab'
@@ -98,5 +76,26 @@ header {
             'sidenav social social'
             'sidenav new_members recent_activity'
             'sidenav message_user settings';
+    }
+}
+
+.widgets {
+    padding: em(30px);
+    border-bottom: 1px solid palette(grey, light);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @include mq(tablet) {
+        &:nth-last-child(2) {
+            border-bottom: none;
+        }
+
+        &:nth-child(5),
+        &:nth-child(8),
+        &:nth-child(10) {
+            border-right: 1px solid palette(grey, light);
+        }
     }
 }
