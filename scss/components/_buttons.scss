@@ -3,14 +3,14 @@
 // ============================================= 
 
 .btn {
-    @include bg-colors($btn-colors);
+    @include ui-colors($ui-colors);
 }
 
 [class^="btn--"] {
     @extend %btn;
 }
 
-.btn--search {
+.btn--light {
     width: auto;
     margin-left: -5px;
     color: $color-primary;

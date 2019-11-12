@@ -1,0 +1,32 @@
+// ============================================= 
+//              Alerts                       
+// ============================================= 
+
+.alert {
+    @include ui-colors($ui-colors);
+}
+
+[class^="alert--"] {
+    @extend %clearfix;
+
+    display: block;
+    margin-bottom: em(30px);
+    padding: em(15px);
+    color: $white;
+    border-radius: $br--default;
+
+    p {
+        display: inline;
+        margin: 0;
+
+        b {
+            padding-right: em(10px);
+        }
+    }
+
+    button {
+        width: auto;
+        padding: 0;
+        float: right;
+    }
+}

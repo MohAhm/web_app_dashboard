@@ -29,6 +29,7 @@ $grey           : #B2B2B2;
 $ship-cove      : #7377BF;
 $de-york        : #81C98F;
 $glacier        : #74B1BF;
+$old_rose       : #C98181;
 
 // Color Usage
 $color-primary           : $ship-cove;
@@ -55,10 +56,13 @@ $color-palettes: (
 );
 
 // UI Colors
-$btn-colors: (
+$ui-colors: (
     primary       : $color-primary,
     secondary     : $grey,
-    search        : $white
+    success       : $color-secondary,
+    error         : $old_rose,
+    info          : $glacier,
+    light         : $white
 );
 
 

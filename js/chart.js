@@ -1,9 +1,3 @@
-// close the alert bar when the close button is clicked
-$('#close').click(function () {
-    $('.alert-message').slideUp();
-});
-
-
 // set global variables of the Chart
 Chart.defaults.global.defaultFontFamily = 'Open Sans';
 Chart.defaults.global.defaultFontColor = '#8e8e8e';

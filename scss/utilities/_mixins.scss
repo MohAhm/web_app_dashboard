@@ -64,7 +64,7 @@
 }
 
 // Generate modifier color classes
-@mixin bg-colors($map) {
+@mixin ui-colors($map) {
 
     @each $theme,
     $color in $map {

@@ -284,7 +284,7 @@ button {
   [class^="btn--"]:active {
     opacity: initial; }
 
-.tab--content .alert-message::after, .settings form::after {
+[class^="alert--"]::after, .settings form::after {
   content: '';
   display: table;
   clear: both; }
@@ -415,10 +415,16 @@ select {
   background-color: #7377BF; }
 .btn--secondary {
   background-color: #B2B2B2; }
-.btn--search {
+.btn--success {
+  background-color: #81C98F; }
+.btn--error {
+  background-color: #C98181; }
+.btn--info {
+  background-color: #74B1BF; }
+.btn--light {
   background-color: #FFF; }
 
-.btn--search {
+.btn--light {
   width: auto;
   margin-left: -5px;
   color: #7377BF;
@@ -426,8 +432,37 @@ select {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-left: none; }
-  .btn--search:hover {
+  .btn--light:hover {
     opacity: initial; }
+
+.alert--primary {
+  background-color: #7377BF; }
+.alert--secondary {
+  background-color: #B2B2B2; }
+.alert--success {
+  background-color: #81C98F; }
+.alert--error {
+  background-color: #C98181; }
+.alert--info {
+  background-color: #74B1BF; }
+.alert--light {
+  background-color: #FFF; }
+
+[class^="alert--"] {
+  display: block;
+  margin-bottom: 1.875em;
+  padding: 0.9375em;
+  color: #FFF;
+  border-radius: 0.4em; }
+  [class^="alert--"] p {
+    display: inline;
+    margin: 0; }
+    [class^="alert--"] p b {
+      padding-right: 0.625em; }
+  [class^="alert--"] button {
+    width: auto;
+    padding: 0;
+    float: right; }
 
 header {
   background-color: #7377BF;
@@ -520,26 +555,10 @@ header {
   position: relative;
   top: -1px;
   border-top: 1px solid #d8d8d8; }
-  .tab--content .alert-message {
-    display: block;
-    margin-bottom: 1.875em;
-    padding: 0.9375em;
-    color: #FFF;
-    background-color: #7377BF;
-    border-radius: 0.4em; }
-    .tab--content .alert-message p {
-      display: inline;
-      margin: 0; }
-      .tab--content .alert-message p b {
-        padding-right: 0.625em; }
-    .tab--content .alert-message button {
-      width: auto;
-      padding: 0;
-      float: right; }
-    @media (min-width: 768px) {
-      .tab--content .alert-message {
-        margin-top: 1.5625em;
-        margin-bottom: 0; } }
+  @media (min-width: 768px) {
+    .tab--content .alert--primary {
+      margin-top: 1.5625em;
+      margin-bottom: 0; } }
 
 .chart {
   display: flex;
@@ -621,6 +640,9 @@ header {
       font-size: 1.125em; }
     .list-group__item--info:hover {
       text-decoration: none; }
+    @media (min-width: 768px) {
+      .list-group__item--info {
+        padding-left: 0.3125em; } }
   .list-group__item--date {
     margin-left: auto; }
 

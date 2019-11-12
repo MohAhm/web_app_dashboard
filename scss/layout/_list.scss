@@ -42,6 +42,10 @@
             &:hover {
                 text-decoration: none;
             }
+
+            @include mq(tablet) {
+                padding-left: em(5px);
+            }
         }
 
         @include modi(date) {
