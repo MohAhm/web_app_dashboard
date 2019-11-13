@@ -85,11 +85,13 @@ header {
 
     &:last-child {
         border-bottom: none;
+        padding-bottom: em(60px);
     }
 
     @include mq(tablet) {
         &:nth-last-child(2) {
             border-bottom: none;
+            padding-bottom: em(60px);
         }
 
         &:nth-child(5),

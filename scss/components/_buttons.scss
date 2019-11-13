@@ -9,17 +9,3 @@
 [class^="btn--"] {
     @extend %btn;
 }
-
-.btn--light {
-    width: auto;
-    margin-left: -5px;
-    color: $color-primary;
-    border: 1px solid palette(grey, light);
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-left: none;
-
-    &:hover {
-        opacity: initial;
-    }
-}

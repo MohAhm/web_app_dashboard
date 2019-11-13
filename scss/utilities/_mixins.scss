@@ -23,7 +23,7 @@
     align-items: $align;
 }
 
-// Ser size for an icon
+// Set size for an icon
 @mixin icn-size($sz) {
     width: $sz;
     height: $sz;

@@ -14,15 +14,6 @@
         }
     }
 
-    svg {
-        @include icn-size(20px);
-        transition: transform .3s ease-out;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-    }
-
     .site-logo {
         margin-right: auto;
         font-size: em(24px);
@@ -32,44 +23,94 @@
     .user-nav {
         @include flexbox($dir: row, $align: center);
         padding-bottom: em(10px);
-    }
 
-    .user-nav li:first-child {
-        display: inline-block;
-        position: relative;
-        margin-top: 10px;
-        margin-right: em(20px);
+        >li:first-child {
+            display: inline-block;
+            position: relative;
+            margin-top: 10px;
+            margin-right: em(20px);
 
-        .notifications-dot {
-            position: absolute;
-            height: em(8px);
-            width: em(8px);
-            top: -2px;
-            right: -2px;
-            background-color: palette(color-secondary, light);
-            border-radius: $br--round;
-        }
-    }
+            svg {
+                @include icn-size(20px);
+                transition: transform .3s ease-out;
 
-    .user-nav li:last-child {
-        padding: em(5px) 0 em(5px) em(15px);
-        border-left: 2px solid palette(color-primary, dark);
-
-        .user {
-            @include flexbox();
-            align-items: center;
-
-            @include modi(img) {
-                @include icn-size(33px);
-                border-radius: $br--round;
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
 
-            @include modi(name) {
-                margin-left: em(10px);
+            .notification {
+
+                @include elem(dot) {
+                    position: absolute;
+                    top: -2px;
+                    right: -2px;
+                    height: em(8px);
+                    width: em(8px);
+                    background-color: palette(color-secondary, light);
+                    border-radius: $br--round;
+                }
+
+                @include elem(list) {
+                    background-color: $white;
+                    width: 300px;
+                    position: absolute;
+                    display: none;
+                    top: 40px;
+                    left: -200px;
+                    z-index: 100;
+
+                    @include modi(item) {
+                        @extend %clearfix;
+                        border-bottom: 1px solid palette(grey, light);
+                        padding: em(15px);
+
+                        a {
+                            color: palette(grey, x-dark);
+                        }
+
+                        .fa-circle {
+                            color: palette(color-secondary, light);
+                            margin-right: em(10px);
+                        }
+
+                        .btn--light {
+                            width: auto;
+                            color: palette(grey, x-dark);
+                            float: right;
+                            padding: 0;
+
+                            &:hover {
+                                color: $old_rose;
+                                opacity: initial;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        >li:last-child {
+            padding: em(5px) 0 em(5px) em(15px);
+            border-left: 2px solid palette(color-primary, dark);
+
+            .user {
+                @include flexbox();
+                align-items: center;
+
+                @include modi(img) {
+                    @include icn-size(33px);
+                    border-radius: $br--round;
+                }
+
+                @include modi(name) {
+                    margin-left: em(10px);
+                }
             }
         }
     }
-
 
     @include mq(tablet) {
         .user-nav {

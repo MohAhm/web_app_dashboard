@@ -1,6 +1,8 @@
 const forms = document.querySelectorAll('form');
 const $name = $('#name');
 const $message = $('#message');
+const $alertIcon = $('#alertIcon');
+const list = $('.notification__list');
 
 
 // cancel the browser default behavior for all form sumbit button
@@ -46,4 +48,26 @@ $('#sendButton').click(function () {
             .slideUp();
     }
 
+});
+
+
+// Display notifications when the alert icon is clicked
+$alertIcon.click(function (e) {
+    e.stopPropagation();
+
+    if (list.css('display') === 'none') {
+        list.slideDown();
+    } else {
+        list.slideUp();
+    }
+
+    $('.notification__dot').hide();
+});
+
+list.click(function (e) {
+    e.stopPropagation();
+});
+
+$(document).click(function () {
+    list.slideUp();
 });
