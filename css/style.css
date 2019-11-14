@@ -592,8 +592,9 @@ header {
   .chart-nav {
     display: flex;
     flex-direction: row; }
+    .chart-nav li:first-child {
+      margin-left: 0.875em; }
     .chart-nav__link--current a {
-      margin: 0 0.625em;
       color: #FFF;
       border-radius: 1.25em;
       background-color: #81C98F; }

@@ -8,6 +8,10 @@
     &-nav {
         @include flexbox($dir: row);
 
+        li:first-child {
+            margin-left: em(14px);
+        }
+
         @include elem(link) {
 
             a {
@@ -18,7 +22,6 @@
 
                 a {
                     @extend %nav-chart-link;
-                    margin: 0 em(10px);
                     color: $white;
                     border-radius: em(20px);
                     background-color: $color-secondary;
