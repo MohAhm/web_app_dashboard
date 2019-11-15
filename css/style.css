@@ -426,7 +426,7 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("../icons/arrow-down.svg");
+  background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat, repeat;
   background-position: right 0.6875em top 55%, 0 0;
   background-size: 1.25em auto, 100%; }

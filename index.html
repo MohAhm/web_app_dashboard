@@ -320,7 +320,7 @@
 				<p><b>Error</b>User name or message field is empty.</p>
 			</div><!-- ./alert--error -->
 
-			<form>
+			<form autocomplete="off">
 				<fieldset>
 					<input type="text" id="name" placeholder="Search for User" aria-label="Search">
 					<textarea id="message" cols="50" rows="5" placeholder="Message for User"></textarea>
@@ -333,10 +333,10 @@
 		<div class="settings widgets">
 			<h4>Settings</h4>
 
-			<form>
+			<form id="settingsForm">
 				<fieldset>
 					<label class="switch-light switch-ios">
-						<input type="checkbox">
+						<input type="checkbox" id="emailNotification">
 						<strong>Send Email Notifications</strong>
 						<span>
 							<span>Off</span>
@@ -346,7 +346,7 @@
 					</label>
 
 					<label class="switch-light switch-ios">
-						<input type="checkbox">
+						<input type="checkbox" id="publicProfile">
 						<strong>Set Profile to Public</strong>
 						<span>
 							<span>Off</span>

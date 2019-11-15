@@ -71,3 +71,47 @@ list.click(function (e) {
 $(document).click(function () {
     list.slideUp();
 });
+
+
+// Local Storage
+function supportsLocalStorage() {
+    try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+    } catch (e) {
+        return false;
+    }
+}
+
+// Initialize checkboxes
+function getCheckboxSetting(id) {
+    const isChecked = localStorage.getItem(id);
+    return JSON.parse(isChecked);
+}
+
+// Save checkbox changes
+function setCheckboxSettings(id, isChecked) {
+    localStorage.setItem(id, isChecked);
+}
+
+
+window.onload = function () {
+    if (supportsLocalStorage()) {
+        const settingsForm = document.getElementById('settingsForm');
+        const emailCheckbox = settingsForm.querySelector('#emailNotification');
+        const publicCheckbox = settingsForm.querySelector('#publicProfile');
+
+        if (getCheckboxSetting('emailNotification')) {
+            emailCheckbox.checked = true;
+        }
+
+        if (getCheckboxSetting('publicProfile')) {
+            publicCheckbox.checked = true;
+        }
+
+        settingsForm.addEventListener('change', (e) => {
+            if (e.target.tagName === 'INPUT') {
+                setCheckboxSettings(e.target.id, e.target.checked);
+            }
+        });
+    }
+};
