@@ -82,15 +82,15 @@ function supportsLocalStorage() {
     }
 }
 
-// Initialize checkboxes
-function getCheckboxSetting(id) {
-    const isChecked = localStorage.getItem(id);
-    return JSON.parse(isChecked);
+// Initialize settings
+function getRecentSetting(id) {
+    const setting = localStorage.getItem(id);
+    return JSON.parse(setting);
 }
 
-// Save checkbox changes
-function setCheckboxSettings(id, isChecked) {
-    localStorage.setItem(id, isChecked);
+// Save recent changes
+function setRecentSettings(id, isChanged) {
+    localStorage.setItem(id, isChanged);
 }
 
 
@@ -99,18 +99,25 @@ window.onload = function () {
         const settingsForm = document.getElementById('settingsForm');
         const emailCheckbox = settingsForm.querySelector('#emailNotification');
         const publicCheckbox = settingsForm.querySelector('#publicProfile');
+        const timezone = settingsForm.querySelector('#timezone');
 
-        if (getCheckboxSetting('emailNotification')) {
+        if (getRecentSetting('emailNotification')) {
             emailCheckbox.checked = true;
         }
 
-        if (getCheckboxSetting('publicProfile')) {
+        if (getRecentSetting('publicProfile')) {
             publicCheckbox.checked = true;
+        }
+
+        if (getRecentSetting('timezone')) {
+            timezone.selectedIndex = getRecentSetting('timezone');
         }
 
         settingsForm.addEventListener('change', (e) => {
             if (e.target.tagName === 'INPUT') {
-                setCheckboxSettings(e.target.id, e.target.checked);
+                setRecentSettings(e.target.id, e.target.checked);
+            } else if (e.target.tagName === 'SELECT') {
+                setRecentSettings(e.target.id, e.target.selectedIndex);
             }
         });
     }
